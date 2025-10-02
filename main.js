@@ -749,7 +749,7 @@ async function main() {
 //        params.get("url") || "train.splat",
 //        "https://huggingface.co/cakewalk/splat-data/resolve/main/",
 //    );
-    const url = "assets/my.splat";
+    const url = "./assets/my.splat";
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
         credentials: "omit", // include, *same-origin, omit
