@@ -1,37 +1,4 @@
-let cameras = [
-    {
-        id: 0,
-        img_name: "00001",
-        width: 1959,
-        height: 1090,
-        position: [
-            0.4610, -1.8026, -0.6421,
-        ],
-        rotation: [
-            [0.0311, -0.9643, -0.2629],
-            [0.0037, -0.2629, 0.9648],
-            [-0.9995, -0.0310, -0.0046],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 1,
-        img_name: "00009",
-        width: 1959,
-        height: 1090,
-        position: [
-            0.0196, 1.7496, 2.1359,
-        ],
-        rotation: [
-            [0.0021, -1.0000, 0.0071],
-            [-0.6976, -0.0066, -0.7164],
-            [0.7165, -0.0034, -0.6976],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    }
-];
+let cameras = [];
 
 let camera = cameras[0];
 
@@ -84,6 +51,72 @@ function logCameraState(viewMatrix) {
         position: position.map(v => v.toFixed(4)),
         rotation: rotation.map(row => row.map(v => v.toFixed(4)))
     });
+}
+
+// Function to load cameras from JSON file
+async function loadCamerasFromJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to load cameras: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error loading cameras:', error);
+        return null;
+    }
+}
+
+// Function to initialize camera locations UI
+function initCameraLocationsUI(cameras, onCameraSelect) {
+    const btn = document.getElementById('camera-locations-btn');
+    const panel = document.getElementById('camera-locations-panel');
+    const list = document.getElementById('camera-locations-list');
+
+    // Toggle panel visibility
+    btn.addEventListener('click', () => {
+        panel.classList.toggle('visible');
+    });
+
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!panel.contains(e.target) && !btn.contains(e.target)) {
+            panel.classList.remove('visible');
+        }
+    });
+
+    // Populate camera list
+    function updateCameraList(currentIndex) {
+        list.innerHTML = '';
+        cameras.forEach((cam, index) => {
+            const item = document.createElement('div');
+            item.className = 'camera-location-item';
+            if (index === currentIndex) {
+                item.classList.add('active');
+            }
+
+            const name = document.createElement('div');
+            name.className = 'camera-location-name';
+            name.textContent = cam.name || `Camera ${cam.id}`;
+
+            const info = document.createElement('div');
+            info.className = 'camera-location-info';
+            info.textContent = `Position: ${cam.position.map(v => v.toFixed(2)).join(', ')}`;
+
+            item.appendChild(name);
+            item.appendChild(info);
+
+            item.addEventListener('click', () => {
+                onCameraSelect(index);
+                updateCameraList(index);
+            });
+
+            list.appendChild(item);
+        });
+    }
+
+    return updateCameraList;
 }
 
 
@@ -641,6 +674,15 @@ let defaultViewMatrix = [
 let viewMatrix = defaultViewMatrix;
 async function main() {
 //    let carousel = false;
+    const loadedCameras = await loadCamerasFromJSON('cameras.json');
+    if (loadedCameras) {
+        cameras = loadedCameras;
+        camera = cameras[0];
+    }
+
+    let activeKeys = [];
+    let currentCameraIndex = 0;
+
     const params = new URLSearchParams(location.search);
     try {
         viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
@@ -771,6 +813,18 @@ async function main() {
     window.addEventListener("resize", resize);
     resize();
 
+    // Initialize camera locations UI
+    const updateCameraListUI = initCameraLocationsUI(cameras, (index) => {
+        currentCameraIndex = index;
+        camera = cameras[index];
+        viewMatrix = getViewMatrix(camera);
+        carousel = false;
+        camid.innerText = "cam  " + currentCameraIndex;
+    });
+
+    // Initial UI update
+    updateCameraListUI(currentCameraIndex);
+
     worker.onmessage = (e) => {
         if (e.data.buffer) {
             splatData = new Uint8Array(e.data.buffer);
@@ -821,9 +875,6 @@ async function main() {
             vertexCount = e.data.vertexCount;
         }
     };
-
-    let activeKeys = [];
-    let currentCameraIndex = 0;
 
     window.addEventListener("keydown", (e) => {
         // if (document.activeElement != document.body) return;
