@@ -5,12 +5,12 @@ let cameras = [
         width: 1959,
         height: 1090,
         position: [
-            -3.0089893469241797, -0.11086489695181866, -3.7527640949141428,
+            0.4610, -1.8026, -0.6421,
         ],
         rotation: [
-            [0.876134201218856, 0.06925962026449776, 0.47706599800804744],
-            [-0.04747421839895102, 0.9972110940209488, -0.057586739349882114],
-            [-0.4797239414934443, 0.027805376500959853, 0.8769787916452908],
+            [0.0311, -0.9643, -0.2629],
+            [0.0037, -0.2629, 0.9648],
+            [-0.9995, -0.0310, -0.0046],
         ],
         fy: 1164.6601287484507,
         fx: 1159.5880733038064,
@@ -21,138 +21,16 @@ let cameras = [
         width: 1959,
         height: 1090,
         position: [
-            -2.5199776022057296, -0.09704735754873686, -3.6247725540304545,
+            0.0196, 1.7496, 2.1359,
         ],
         rotation: [
-            [0.9982731285632193, -0.011928707708098955, -0.05751927260507243],
-            [0.0065061360949636325, 0.9955928229282383, -0.09355533724430458],
-            [0.058381769258182864, 0.09301955098900708, 0.9939511719154457],
+            [0.0021, -1.0000, 0.0071],
+            [-0.6976, -0.0066, -0.7164],
+            [0.7165, -0.0034, -0.6976],
         ],
         fy: 1164.6601287484507,
         fx: 1159.5880733038064,
-    },
-    {
-        id: 2,
-        img_name: "00017",
-        width: 1959,
-        height: 1090,
-        position: [
-            -0.7737533667465242, -0.3364271945329695, -2.9358969417573753,
-        ],
-        rotation: [
-            [0.9998813418672372, 0.013742375651625236, -0.0069605529394208224],
-            [-0.014268370388586709, 0.996512943252834, -0.08220929105659476],
-            [0.00580653013657589, 0.08229885200307129, 0.9965907801935302],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 3,
-        img_name: "00025",
-        width: 1959,
-        height: 1090,
-        position: [
-            1.2198221749590001, -0.2196687861401182, -2.3183162007028453,
-        ],
-        rotation: [
-            [0.9208648867765482, 0.0012010625395201253, 0.389880004297208],
-            [-0.06298204172269357, 0.987319521752825, 0.14571693239364383],
-            [-0.3847611242348369, -0.1587410451475895, 0.9092635249821667],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 4,
-        img_name: "00033",
-        width: 1959,
-        height: 1090,
-        position: [
-            1.742387858893817, -0.13848225198886954, -2.0566370113193146,
-        ],
-        rotation: [
-            [0.24669889292141334, -0.08370189346592856, -0.9654706879349405],
-            [0.11343747891376445, 0.9919082664242816, -0.05700815184573074],
-            [0.9624300466054861, -0.09545671285663988, 0.2541976029815521],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 5,
-        img_name: "00041",
-        width: 1959,
-        height: 1090,
-        position: [
-            3.6567309419223935, -0.16470990600750707, -1.3458085590422042,
-        ],
-        rotation: [
-            [0.2341293058324528, -0.02968330457755884, -0.9717522161434825],
-            [0.10270823606832301, 0.99469554638321, -0.005638106875665722],
-            [0.9667649592295676, -0.09848690996657204, 0.2359360976431732],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 6,
-        img_name: "00049",
-        width: 1959,
-        height: 1090,
-        position: [
-            3.9013554243203497, -0.2597500978038105, -0.8106154188297828,
-        ],
-        rotation: [
-            [0.6717235545638952, -0.015718162115524837, -0.7406351366386528],
-            [0.055627354673906296, 0.9980224478387622, 0.029270992841185218],
-            [0.7387104058127439, -0.060861588786650656, 0.6712695459756353],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 7,
-        img_name: "00057",
-        width: 1959,
-        height: 1090,
-        position: [4.742994605467533, -0.05591660945412069, 0.9500365976084458],
-        rotation: [
-            [-0.17042655709210375, 0.01207080756938, -0.9852964448542146],
-            [0.1165090336695526, 0.9931575292530063, -0.00798543433078162],
-            [0.9784581921120181, -0.1161568667478904, -0.1706667764862097],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 8,
-        img_name: "00065",
-        width: 1959,
-        height: 1090,
-        position: [4.34676307626522, 0.08168160516967145, 1.0876221470355405],
-        rotation: [
-            [-0.003575447631888379, -0.044792503246552894, -0.9989899137764799],
-            [0.10770152645126597, 0.9931680875192705, -0.04491693593046672],
-            [0.9941768441149182, -0.10775333677534978, 0.0012732004866391048],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
-    {
-        id: 9,
-        img_name: "00073",
-        width: 1959,
-        height: 1090,
-        position: [3.264984351114202, 0.078974937336732, 1.0117200284114904],
-        rotation: [
-            [-0.026919994628162257, -0.1565891128261527, -0.9872968974090509],
-            [0.08444552208239385, 0.983768234577625, -0.1583319754069128],
-            [0.9960643893290491, -0.0876350978794554, -0.013259786205163005],
-        ],
-        fy: 1164.6601287484507,
-        fx: 1159.5880733038064,
-    },
+    }
 ];
 
 let camera = cameras[0];
@@ -184,6 +62,31 @@ function getViewMatrix(camera) {
     ].flat();
     return camToWorld;
 }
+
+function getCameraPositionAndRotation(viewMatrix) {
+    // Extract position from view matrix
+    const inv = invert4(viewMatrix);
+    const rotation = [
+        [viewMatrix[0], viewMatrix[1], viewMatrix[2]],
+        [viewMatrix[4], viewMatrix[5], viewMatrix[6]],
+        [viewMatrix[8], viewMatrix[9], viewMatrix[10]]
+    ];
+
+    // Extract position from the last column
+    const position = [inv[12], inv[13], inv[14]];
+
+    return { position, rotation };
+}
+
+function logCameraState(viewMatrix) {
+    const { position, rotation } = getCameraPositionAndRotation(viewMatrix);
+    console.log('Camera State:', {
+        position: position.map(v => v.toFixed(4)),
+        rotation: rotation.map(row => row.map(v => v.toFixed(4)))
+    });
+}
+
+
 // function translate4(a, x, y, z) {
 //     return [
 //         ...a.slice(0, 12),
@@ -737,12 +640,14 @@ let defaultViewMatrix = [
 ];
 let viewMatrix = defaultViewMatrix;
 async function main() {
-    let carousel = true;
+//    let carousel = false;
     const params = new URLSearchParams(location.search);
     try {
         viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
-        carousel = false;
-    } catch (err) {}
+//        carousel = false;
+    } catch (err) {
+        viewMatrix = getViewMatrix(cameras[0]);
+    }
     const url = new URL(
         // "nike.splat",
         // location.href,
@@ -922,12 +827,17 @@ async function main() {
 
     window.addEventListener("keydown", (e) => {
         // if (document.activeElement != document.body) return;
-        carousel = false;
+//        carousel = false;
         if (!activeKeys.includes(e.code)) activeKeys.push(e.code);
         if (/\d/.test(e.key)) {
-            currentCameraIndex = parseInt(e.key);
-            camera = cameras[currentCameraIndex];
-            viewMatrix = getViewMatrix(camera);
+            const newIndex = parseInt(e.key);
+
+            // Check if the new index is a valid index in the cameras array.
+            if (newIndex >= 0 && newIndex < cameras.length) {
+                currentCameraIndex = newIndex;
+                camera = cameras[currentCameraIndex];
+                viewMatrix = getViewMatrix(camera);
+            }
         }
         if (["-", "_"].includes(e.key)) {
             currentCameraIndex =
@@ -947,7 +857,7 @@ async function main() {
                 );
             camid.innerText = "";
         } else if (e.code === "KeyP") {
-            carousel = true;
+//            carousel = true;
             camid.innerText = "";
         }
     });
@@ -961,7 +871,7 @@ async function main() {
     window.addEventListener(
         "wheel",
         (e) => {
-            carousel = false;
+//            carousel = false;
             e.preventDefault();
             const lineHeight = 10;
             const scale =
@@ -1004,14 +914,14 @@ async function main() {
 
     let startX, startY, down;
     canvas.addEventListener("mousedown", (e) => {
-        carousel = false;
+//        carousel = false;
         e.preventDefault();
         startX = e.clientX;
         startY = e.clientY;
         down = e.ctrlKey || e.metaKey ? 2 : 1;
     });
     canvas.addEventListener("contextmenu", (e) => {
-        carousel = false;
+//        carousel = false;
         e.preventDefault();
         startX = e.clientX;
         startY = e.clientY;
@@ -1068,13 +978,13 @@ async function main() {
         (e) => {
             e.preventDefault();
             if (e.touches.length === 1) {
-                carousel = false;
+//                carousel = false;
                 startX = e.touches[0].clientX;
                 startY = e.touches[0].clientY;
                 down = 1;
             } else if (e.touches.length === 2) {
                 // console.log('beep')
-                carousel = false;
+//                carousel = false;
                 startX = e.touches[0].clientX;
                 altX = e.touches[1].clientX;
                 startY = e.touches[0].clientY;
@@ -1225,11 +1135,11 @@ async function main() {
             // Assuming the left stick controls translation (axes 0 and 1)
             if (Math.abs(gamepad.axes[0]) > axisThreshold) {
                 inv = translate4(inv, moveSpeed * gamepad.axes[0], 0, 0);
-                carousel = false;
+//                carousel = false;
             }
             if (Math.abs(gamepad.axes[1]) > axisThreshold) {
                 inv = translate4(inv, 0, 0, -moveSpeed * gamepad.axes[1]);
-                carousel = false;
+//                carousel = false;
             }
             if (gamepad.buttons[12].pressed || gamepad.buttons[13].pressed) {
                 inv = translate4(
@@ -1240,7 +1150,7 @@ async function main() {
                             gamepad.buttons[13].pressed),
                     0,
                 );
-                carousel = false;
+//                carousel = false;
             }
 
             if (gamepad.buttons[14].pressed || gamepad.buttons[15].pressed) {
@@ -1252,29 +1162,29 @@ async function main() {
                     0,
                     0,
                 );
-                carousel = false;
+//                carousel = false;
             }
 
             // Assuming the right stick controls rotation (axes 2 and 3)
             if (Math.abs(gamepad.axes[2]) > axisThreshold) {
                 inv = rotate4(inv, rotateSpeed * gamepad.axes[2], 0, 1, 0);
-                carousel = false;
+//                carousel = false;
             }
             if (Math.abs(gamepad.axes[3]) > axisThreshold) {
                 inv = rotate4(inv, -rotateSpeed * gamepad.axes[3], 1, 0, 0);
-                carousel = false;
+//                carousel = false;
             }
 
             let tiltAxis = gamepad.buttons[6].value - gamepad.buttons[7].value;
             if (Math.abs(tiltAxis) > axisThreshold) {
                 inv = rotate4(inv, rotateSpeed * tiltAxis, 0, 0, 1);
-                carousel = false;
+//                carousel = false;
             }
             if (gamepad.buttons[4].pressed && !leftGamepadTrigger) {
                 camera =
                     cameras[(cameras.indexOf(camera) + 1) % cameras.length];
                 inv = invert4(getViewMatrix(camera));
-                carousel = false;
+//                carousel = false;
             }
             if (gamepad.buttons[5].pressed && !rightGamepadTrigger) {
                 camera =
@@ -1283,16 +1193,16 @@ async function main() {
                             cameras.length
                     ];
                 inv = invert4(getViewMatrix(camera));
-                carousel = false;
+//                carousel = false;
             }
             leftGamepadTrigger = gamepad.buttons[4].pressed;
             rightGamepadTrigger = gamepad.buttons[5].pressed;
             if (gamepad.buttons[0].pressed) {
                 isJumping = true;
-                carousel = false;
+//                carousel = false;
             }
             if (gamepad.buttons[3].pressed) {
-                carousel = true;
+//                carousel = true;
             }
         }
 
@@ -1328,15 +1238,15 @@ async function main() {
 
         viewMatrix = invert4(inv);
 
-        if (carousel) {
-            let inv = invert4(defaultViewMatrix);
-
-            const t = Math.sin((Date.now() - start) / 5000);
-            inv = translate4(inv, 2.5 * t, 0, 6 * (1 - Math.cos(t)));
-            inv = rotate4(inv, -0.6 * t, 0, 1, 0);
-
-            viewMatrix = invert4(inv);
-        }
+//        if (carousel) {
+//            let inv = invert4(defaultViewMatrix);
+//
+//            const t = Math.sin((Date.now() - start) / 5000);
+//            inv = translate4(inv, 2.5 * t, 0, 6 * (1 - Math.cos(t)));
+//            inv = rotate4(inv, -0.6 * t, 0, 1, 0);
+//
+//            viewMatrix = invert4(inv);
+//        }
 
         if (isJumping) {
             jumpDelta = Math.min(1, jumpDelta + 0.05);
@@ -1377,6 +1287,11 @@ async function main() {
         }
         lastFrame = now;
         requestAnimationFrame(frame);
+
+//        if (JSON.stringify(viewMatrix) !== JSON.stringify(frame.lastViewMatrix || [])) {
+//            logCameraState(viewMatrix);
+//            frame.lastViewMatrix = [...viewMatrix];
+//        }
     };
 
     frame();
@@ -1427,7 +1342,7 @@ async function main() {
     window.addEventListener("hashchange", (e) => {
         try {
             viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
-            carousel = false;
+//            carousel = false;
         } catch (err) {}
     });
 
